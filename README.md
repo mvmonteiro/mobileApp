@@ -1,2 +1,2 @@
 # mobileApp
-Primeiro app mobile com react native cli
+Mobile app with react native CLI
