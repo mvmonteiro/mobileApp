@@ -1,35 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Cesta from './src/pages/Cesta';
+import React from 'react'
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native'
+import Cesta from './src/pages/cesta/Cesta'
+import mockCesta from './src/mocks/cesta'
+import mockCesta2 from './src/mocks/cesta2'
 
 function App(): JSX.Element {
   return (
     <>
-      <View style={styles.sectionContainer}>
-        <Text>Olá mundo</Text>
-        <Cesta />
-      </View>
+      <SafeAreaView >
+        <StatusBar />
+        <ScrollView>
+
+          <Cesta {... mockCesta} />
+          <Cesta {... mockCesta2} />
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
+export default App
