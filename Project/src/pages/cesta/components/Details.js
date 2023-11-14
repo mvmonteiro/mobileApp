@@ -1,8 +1,9 @@
 import React from 'react'
 import { Image, StyleSheet, View } from 'react-native'
 import FontText from '../../../components/FontText'
+import StandardButton from '../../../components/StandardButton'
 
-export default function Details({ nome, logoFazenda, nomeFazenda, descricao, preco }) {
+export default function Details({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) {
     return(
         <>
             <FontText style={styles.session}>{nome}</FontText>
@@ -12,6 +13,9 @@ export default function Details({ nome, logoFazenda, nomeFazenda, descricao, pre
             </View>
             <FontText style={styles.description}>{descricao}</FontText>
             <FontText style={styles.price}>{preco}</FontText>
+
+            <StandardButton text={botao} onPress={() => {}}/>
+
         </>
     )
 }
@@ -47,5 +51,18 @@ const styles = StyleSheet.create({
       fontSize: 26,
       lineHeight: 42,
       marginTop: 8
+    },
+    button: {
+      marginTop: 16,
+      backgroundColor: "#2A9F85",
+      paddingVertical: 16,
+      borderRadius: 6,
+    },
+    buttonText: {
+      textAlign: 'center',
+      color: "#fff",
+      fontSize: 16,
+      lineHeight: 26,
+      fontWeight: "bold"
     }
   })

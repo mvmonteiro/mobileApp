@@ -2,18 +2,15 @@ import React from 'react'
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native'
 import Cesta from './src/pages/cesta/Cesta'
 import mockCesta from './src/mocks/cesta'
-import mockCesta2 from './src/mocks/cesta2'
 
 function App(): JSX.Element {
   return (
     <>
-      <SafeAreaView >
+      <SafeAreaView style={{ flex: 1 }}>
         <StatusBar />
-        <ScrollView>
-
-          <Cesta {... mockCesta} />
-          <Cesta {... mockCesta2} />
-        </ScrollView>
+          <ScrollView>
+            <Cesta {... mockCesta} />
+          </ScrollView>
       </SafeAreaView>
     </>
   );
